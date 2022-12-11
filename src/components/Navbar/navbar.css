@@ -1,0 +1,92 @@
+.n-container {
+  height: 160px;
+  padding: 5px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.n-email {
+  letter-spacing: 1.2px;
+  margin-right: 15px;
+}
+.n-row:first-child {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.socials img {
+  width: 25px;
+  height: auto;
+  margin: 0 10px;
+  transition: all 0.5s;
+}
+.socials img:hover {
+  transform: scale(1.3);
+}
+
+.n-row:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.icons a {
+  color: #001e20;
+  font-size: 18px;
+}
+.icons span {
+  position: relative;
+  margin: 0 15px;
+  text-transform: uppercase;
+}
+
+.icons span .totalItems {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -10px;
+  right: -28px;
+  background-color: rgb(194, 28, 28);
+  color: aliceblue;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+.items {
+  list-style-type: none;
+  background: linear-gradient(45deg, black, rgb(53, 53, 53));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.list {
+  margin-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: aliceblue;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+.list a {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: aliceblue;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: all 0.2s;
+}
+.list a:hover {
+  color: red;
+}
+.btn {
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  padding: 5px;
+  color: black;
+  font-size: 18px;
+}
