@@ -31,6 +31,7 @@
   justify-content: space-between;
   margin: 15px 0;
 }
+
 .icons a {
   color: #001e20;
   font-size: 18px;
@@ -64,11 +65,6 @@
 }
 .list {
   margin-right: 20px;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: aliceblue;
-  cursor: pointer;
-  letter-spacing: 2px;
 }
 .list a {
   font-size: 20px;
@@ -89,4 +85,45 @@
   padding: 5px;
   color: black;
   font-size: 18px;
+}
+.list a.active {
+  color: red;
+}
+@media screen and(max-width: 489px) {
+  .n-row:first-child {
+    font-size: 10px;
+  }
+
+  .socials img {
+    width: 15px;
+    margin: 0 5px;
+  }
+  .n-row:nth-child(2) .n-col .logo {
+    /* Respon logo */
+    font-size: 10px;
+  }
+
+  .icons a {
+    font-size: 12px;
+  }
+  .icons span {
+    margin: 0 10px;
+  }
+
+  .icons span .totalItems {
+    top: -10px;
+    right: -28px;
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    font-size: 10px;
+  }
+
+  .list a {
+    font-size: 16px;
+  }
+
+  .list:last-child {
+    margin-right: unset;
+  }
 }

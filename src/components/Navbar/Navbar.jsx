@@ -7,6 +7,7 @@ import {
   faShoppingBag,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -65,16 +66,24 @@ const Navbar = () => {
         <nav className="nav">
           <ul className="items">
             <li className="list">
-              <a href="/">Home</a>
+              <NavLink to="/" activeClassName="active">
+                Home
+              </NavLink>
             </li>
             <li className="list">
-              <a href="/shop">Shop</a>
+              <NavLink to="/shop" activeClassName="active">
+                Shop
+              </NavLink>
             </li>
             <li className="list">
-              <a href="/about">About</a>
+              <NavLink to="/about" activeClassName="active">
+                About
+              </NavLink>
             </li>
             <li className="list">
-              <a href="/contact">Contact</a>
+              <NavLink to="/contact" activeClassName="active">
+                Contact
+              </NavLink>
             </li>
           </ul>
           <button className="btn">BTN</button>
