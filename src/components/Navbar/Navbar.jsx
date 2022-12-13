@@ -21,14 +21,14 @@ const Navbar = () => {
         </div>
         <div className="n-col">
           <div className="socials">
-            <a href="#">
-              <img src="/img/facebook.png" alt="" />
+            <a href="/">
+              <img src="/images/socials/facebook.png" alt="" />
             </a>
-            <a href="#">
-              <img src="/img/instagram.png" alt="" />
+            <a href="/">
+              <img src="/images/socials/instagram.png" alt="" />
             </a>
-            <a href="#">
-              <img src="/img/twitter.png" alt="" />
+            <a href="/">
+              <img src="/images/socials/twitter.png" alt="" />
             </a>
           </div>
         </div>
