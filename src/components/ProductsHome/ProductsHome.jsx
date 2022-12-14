@@ -8,7 +8,7 @@ const ProductsHome = () => {
     <div className="hps-container">
       <h2>Latest Products</h2>
       <div className="hps-row">
-        {products.slice(0, 6).map((item) => (
+        {products.slice(0, 8).map((item) => (
           <ProductHome item={item} key={item._id} />
         ))}
       </div>
