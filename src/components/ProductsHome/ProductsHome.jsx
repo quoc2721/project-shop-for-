@@ -1,7 +1,7 @@
 import React from "react";
 import { products } from "../../data";
-import "../ProductsHome/productsHome.css";
 import ProductHome from "./ProductHome";
+import "../ProductsHome/productsHome.css";
 
 const ProductsHome = () => {
   return (
