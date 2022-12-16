@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="f-container">
       <div className="f-row">
         <div className="f-col">
-          <a href="#">
+          <a href="/">
             <h1 className="logo">LOGO</h1>
           </a>
           <p>

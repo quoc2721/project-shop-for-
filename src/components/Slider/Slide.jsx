@@ -1,12 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../Slider/slide.css";
 import {
   faArrowCircleLeft,
   faArrowCircleRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
-import { sliderItems } from "../../data";
+import axios from "axios";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -17,6 +16,16 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+
+  const [slider, setSlider] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get("/api/sliderItems");
+      setSlider(result.data);
+    };
+    fetchData();
+  });
   return (
     <div className="s-container">
       <div className="s-arrow left" onClick={() => handleClick("left")}>
@@ -27,7 +36,7 @@ const Slider = () => {
         slideIndex={slideIndex}
         style={{ transform: `translateX(${slideIndex * -100}vw)` }}
       >
-        {sliderItems.map((item) => (
+        {slider.map((item) => (
           <div className="slide" key={item.id}>
             <div className="img-container">
               <img src={item.image} className="s-img" alt="" />

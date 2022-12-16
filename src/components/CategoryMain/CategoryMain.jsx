@@ -1,8 +1,17 @@
-import React from "react";
-import { category } from "../../data";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "../CategoryMain/categoryMain.css";
 
 const CategoryMain = () => {
+  const [category, setCategory] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get("/api/category");
+      setCategory(result.data);
+    };
+    fetchData();
+  });
   return (
     <div className="c-container">
       <div className="c-row">

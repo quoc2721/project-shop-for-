@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
       <div className="n-row">
         <div className="n-col">
-          <a href="#">
+          <a href="/">
             <h1 className="logo">LOGO</h1>
           </a>
         </div>

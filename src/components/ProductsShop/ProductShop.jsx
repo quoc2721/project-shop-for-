@@ -1,18 +1,11 @@
 import React from "react";
-import { useState } from "react";
-import Quick from "../Quick/Quick";
-import "../ProductsHome/productHome.css";
-import {
-  faEye,
-  faHeart,
-  faShoppingBag,
-} from "@fortawesome/free-solid-svg-icons";
+import "./productShop.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
-const ProductHome = ({ item }) => {
-  const [open, setOpen] = useState(false);
+const ProductShop = ({ item }) => {
   return (
-    <div className="hp-card">
+    <div className="ps-card">
       <div className="card-header">
         <img src={item.image} alt={item.title} />
       </div>
@@ -21,9 +14,6 @@ const ProductHome = ({ item }) => {
         <span>${item.price}</span>
       </div>
       <div className="card-footer">
-        <button onClick={() => setOpen(true)} className="eye">
-          <FontAwesomeIcon icon={faEye} />
-        </button>
         <button>
           <FontAwesomeIcon icon={faHeart} />
         </button>
@@ -31,9 +21,7 @@ const ProductHome = ({ item }) => {
           <FontAwesomeIcon icon={faShoppingBag} />
         </button>
       </div>
-      {open && <Quick item={item} />}
     </div>
   );
 };
-
-export default ProductHome;
+export default ProductShop;
